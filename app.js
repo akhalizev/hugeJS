@@ -15,3 +15,26 @@ function showPerson(person) {
 people.forEach((item) => {
     console.log(item.position.toUpperCase());
 })
+
+//map
+
+const ages = people.map(function (person) {
+    return person.age;
+});
+
+const newPeople = people.map((person) => {
+    return {
+        firstName: person.name.toUpperCase(),
+        oldAge: person.age + 20,
+    }
+});
+
+const names = people.map((person) => {
+    return `<h1>${person.name}</h1>`
+})
+
+console.log(ages);
+console.log(newPeople);
+
+document.body.innerHTML = names.join('');
+console.log(names);
