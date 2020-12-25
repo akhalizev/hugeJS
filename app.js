@@ -43,8 +43,9 @@ const youngPeople = people.filter((person) => {
     return person.age < 26;
 });
 
+
 console.log(youngPeople);
-document.body.innerHTML = youngPeople;//
+//document.body.innerHTML = `<h2>${young}</h2>`;//
 
 const developers = people.filter((person) => {
     return person.position === 'developer';
