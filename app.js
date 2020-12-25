@@ -1,26 +1,17 @@
-//for each
+const btn = document.querySelector('.btn');
+const heading = document.querySelector('h2');
 
-const people = [
-    { name: 'bob', age: 20, position: 'developer', id: 0, salary: 200 },
-    { name: 'peter', age: 30, position: 'designer', id: 1, salary: 300 },
-    { name: 'sus', age: 25, position: 'director', id:2, salary: 500 },
-];
+function changeColors() {
+    let hasClass = heading.classList.contains('red');
+    if (hasClass) {
+        heading.classList.remove('red');
+    } else {
+        heading.classList.add('red');
+    }
+}
 
-const total = people.reduce(function (acc, currItem) {
-    console.log(`total ${acc}`);
-    console.log(`current money ${currItem.salary}`);
-    acc += currItem.salary;
+// btn.addEventListener('click', function () {
+//     heading.classList.add('red');
+// });
 
-    return acc
-},0);
-
-console.log(total);
-
-//FIND
-// const person = people.find((person) => {
-//     return person.id === 3;
-// })
-
-
-
-// document.body.innerHTML = `<h4>${person.name}</h4>`
+btn.addEventListener('click', changeColors);
