@@ -1,17 +1,10 @@
-const btn = document.querySelector('.btn');
-const heading = document.querySelector('h2');
+const form = document.getElementById('form');
+const name = document.getElementById('name');
+const password = document.getElementById('password');
 
-function changeColors() {
-    let hasClass = heading.classList.contains('red');
-    if (hasClass) {
-        heading.classList.remove('red');
-    } else {
-        heading.classList.add('red');
-    }
-}
-
-// btn.addEventListener('click', function () {
-//     heading.classList.add('red');
-// });
-
-btn.addEventListener('click', changeColors);
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    console.log('submitted');
+    console.log(name.value);
+    console.log(password.value);
+})
